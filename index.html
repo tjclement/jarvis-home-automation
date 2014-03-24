@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html ng-app="jarvisApp">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
+
+    <!-- Own theme -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+    <script type="text/javascript" src="js/controllers.js"></script>
+
+    <title>J.A.R.V.I.S. Home Control System</title>
+</head>
+<body ng-controller="Jarvis">
+    <div class="container">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-heading">
+                <a href="javascript:return(0);" class="navbar-brand text-muted">J.A.R.V.I.S. Home Control System</a>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-xs-12 col-md-8">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Lighting</h3>
+                    </div>
+                    <div class="panel-body">
+                        <span ng-repeat="deviceTarget in lighting" ng-class="'col-xs-' + 12/deviceCount">
+                            <span class="label label-primary">{{deviceTarget.name}}</span>
+                            <button class="btn btn-lg" ng-class="{'btn-primary': deviceTarget.state, 'btn-default': !deviceTarget.state}" ng-click="toggleTarget(deviceTarget.name, !deviceTarget.state)"><span class="glyphicon glyphicon-off"></span></button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Kitchen Equipment</h3>
+                    </div>
+                    <div class="panel-body">
+                        <span ng-repeat="deviceTarget in devices" ng-class="'col-xs-' + 12/deviceCount">
+                            <span class="label label-primary">{{deviceTarget.name}}</span>
+                            <button class="btn btn-lg" ng-class="{'btn-primary': deviceTarget.state, 'btn-default': !deviceTarget.state}" ng-click="toggleTarget(deviceTarget.name, !deviceTarget.state)"><span class="glyphicon glyphicon-off"></span></button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Latest compiled and minified jQuery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified Bootstrap -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

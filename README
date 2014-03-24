@@ -1,0 +1,1 @@
+A simple AngularJS <-> PHP JSON API home automation control system that uses HLK-RM04 modules with relays to control home applicances.

@@ -1,1 +1,3 @@
 A simple AngularJS <-> PHP JSON API home automation control system that uses HLK-RM04 modules with relays to control home applicances.
+
+The rm04-gpio-firmware contains the original 1.78 firmware, and the 1.83 firmware needed for GPIO functionality, as well as the OEM provided explanation of how to get the GPIO working. Be sure to realise that the GPIO pin is pin 9, even though the documentation says otherwise in some places.

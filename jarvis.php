@@ -13,10 +13,11 @@ class Jarvis
     private static $pinCommandURL = 'http://%s/goform/ser2netconfigAT';
     private static $sysCommandURL = 'http://%s/goform/hlk34fge3360llf94wwq24';
     private static $ipTranslationsForDevices = array(
-        'Kitchen Extractor' => '192.168.0.130'
+        'Kitchen Extractor' => '10.0.1.1'
     );
     private static $ipTranslationsForLighting = array(
-        'Bed' => '192.168.0.131'
+        'Living Room' => '10.0.1.16'
+        'Office' => '10.0.1.16'
     );
     private static $authenticationCredentials = 'admin:admin';
 

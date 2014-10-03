@@ -45,7 +45,7 @@ jarvisApp.controller('Jarvis', function Jarvis($scope, $http,  $timeout)
                     $scope.lighting[target]["state"] = Boolean(parseInt(data));
                 }
             });
-    }
+    };
 
     $scope.updateTargets = function(){
 
@@ -57,7 +57,7 @@ jarvisApp.controller('Jarvis', function Jarvis($scope, $http,  $timeout)
         {
             $scope.updateTarget(target, "device");
         }
-    }
+    };
 
     $scope.toggleTarget = function(targetName, state)
     {
@@ -68,5 +68,5 @@ jarvisApp.controller('Jarvis', function Jarvis($scope, $http,  $timeout)
         ).success(function(){
                $scope.updateTargets();
             });
-    }
+    };
 });

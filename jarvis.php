@@ -16,7 +16,7 @@ class Jarvis
         'Kitchen Extractor' => '10.0.3.1'
     );
     private static $ipTranslationsForLighting = array(
-        'Living Room' => '10.0.3.16'
+        'Living Room' => '10.0.3.16',
         'Office' => '10.0.3.17'
     );
     private static $authenticationCredentials = 'admin:admin';

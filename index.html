@@ -36,7 +36,7 @@
                     <div class="panel-body">
                         <span ng-repeat="deviceTarget in lighting" ng-class="'col-xs-' + 12/deviceCount">
                             <span class="label label-primary">{{deviceTarget.name}}</span>
-                            <button class="btn btn-lg" ng-class="{'btn-primary': deviceTarget.state, 'btn-default': !deviceTarget.state}" ng-click="toggleTarget(deviceTarget.name, !deviceTarget.state)"><span class="glyphicon glyphicon-off"></span></button>
+                            <button class="btn btn-lg" ng-class="{'btn-primary': !deviceTarget.state, 'btn-default': deviceTarget.state}" ng-click="toggleTarget(deviceTarget.name, !deviceTarget.state)"><span class="glyphicon glyphicon-off"></span></button>
                         </span>
                     </div>
                 </div>
@@ -50,7 +50,7 @@
                     <div class="panel-body">
                         <span ng-repeat="deviceTarget in devices" ng-class="'col-xs-' + 12/deviceCount">
                             <span class="label label-primary">{{deviceTarget.name}}</span>
-                            <button class="btn btn-lg" ng-class="{'btn-primary': deviceTarget.state, 'btn-default': !deviceTarget.state}" ng-click="toggleTarget(deviceTarget.name, !deviceTarget.state)"><span class="glyphicon glyphicon-off"></span></button>
+                            <button class="btn btn-lg" ng-class="{'btn-primary': !deviceTarget.state, 'btn-default': deviceTarget.state}" ng-click="toggleTarget(deviceTarget.name, !deviceTarget.state)"><span class="glyphicon glyphicon-off"></span></button>
                         </span>
                     </div>
                 </div>

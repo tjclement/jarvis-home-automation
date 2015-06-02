@@ -170,7 +170,7 @@ class Jarvis
             ),
         );
         $context  = stream_context_create($options);
-        $result = file_get_contents($Url, false, $context);
+        $result = file_get_contents($Url.'?'.http_build_query($data), false, $context);
 
         return($result);
     }
